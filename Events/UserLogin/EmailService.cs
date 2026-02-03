@@ -2,7 +2,7 @@
 {
     public class EmailService
     {
-        public static void BlockUserEmail(Object Sender, BlockUserEventArgs e)
+        public static void BlockUserEmail(Object? sender, BlockUserEventArgs e)
         {
             Console.WriteLine($"{e.user.Username}, you have been blocked by the system.");
         }
