@@ -24,7 +24,7 @@
 
         public bool IsLoginRetryAvailable()
         {
-            return _maxRetries.Equals(0);
+            return !_maxRetries.Equals(0);
         }
         
         /**
@@ -34,10 +34,15 @@
         {
             if (IsLoginRetryAvailable())
             {
-                Console.WriteLine(_user.Password.Equals(c_userPass)
-                    ? $"User {_user.Username} successfully logged in."
-                    : $"User {_user.Username} failed to login."
-                );
+                if (_user.Password.Equals(c_userPass))
+                {
+                    Console.WriteLine($"User {_user.Username} successfully logged in.");
+                }
+                else
+                {
+                    Console.WriteLine($"User {_user.Username} failed to login.");
+                    _maxRetries--;
+                }
             }
             else
             {
