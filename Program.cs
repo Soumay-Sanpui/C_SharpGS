@@ -1,4 +1,5 @@
-﻿using C_SharpGS.Events.UserLogin;
+﻿using C_SharpGS.Events.ProductStock;
+using C_SharpGS.Events.UserLogin;
 
 namespace C_SharpGS
 {
@@ -8,7 +9,8 @@ namespace C_SharpGS
         {
             Console.WriteLine("_____Getting Started with C#._____");
             
-            User.RunUserLoginExample(); // Solution to user login event problem.
+            // User.RunUserLoginExample(); // Solution to user login event problem.
+            Product.RunProductStockExample();
         }
     }
 }
