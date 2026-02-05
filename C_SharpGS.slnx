@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="C_SharpGS.csproj" />
-  <Project Path="DesignPattern/DesignPattern.csproj" />
+  <Project Path="DesignPatterns/DesignPatterns.csproj" />
+  <Project Path="GettingStarted/GettingStarted.csproj" />
 </Solution>

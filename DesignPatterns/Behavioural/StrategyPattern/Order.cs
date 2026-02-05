@@ -1,4 +1,4 @@
-namespace DesignPattern.StrategyPattern;
+namespace DesignPatterns.Behavioural.StrategyPattern;
 
 public class Order
 {

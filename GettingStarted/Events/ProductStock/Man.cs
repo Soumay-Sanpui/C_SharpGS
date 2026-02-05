@@ -1,4 +1,4 @@
-﻿namespace C_SharpGS.Events.ProductStock;
+namespace GettingStarted.Events.ProductStock;
 
 public class Man
 {

@@ -1,6 +1,6 @@
-using DesignPattern.StrategyPattern.ShippingStrategies;
+using DesignPatterns.Behavioural.StrategyPattern.ShippingStrategies;
 
-namespace DesignPattern.StrategyPattern;
+namespace DesignPatterns.Behavioural.StrategyPattern;
 
 public class ShippingCalculator
 {

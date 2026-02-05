@@ -1,4 +1,4 @@
-namespace DesignPattern.StrategyPattern.ShippingStrategies;
+namespace DesignPatterns.Behavioural.StrategyPattern.ShippingStrategies;
 
 public class FlatRateShipping : IShippingStrategy
 {

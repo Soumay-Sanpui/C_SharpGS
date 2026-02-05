@@ -1,9 +1,9 @@
-﻿namespace C_SharpGS.Events.UserLogin
+namespace GettingStarted.Events.UserLogin
 {
     public class User
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string? Username { get; private init; }
+        public string? Password { get; private init; }
 
         public static void RunUserLoginExample()
         {

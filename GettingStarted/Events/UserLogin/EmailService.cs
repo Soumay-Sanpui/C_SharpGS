@@ -1,4 +1,4 @@
-﻿namespace C_SharpGS.Events.UserLogin
+namespace GettingStarted.Events.UserLogin
 {
     public class EmailService
     {
