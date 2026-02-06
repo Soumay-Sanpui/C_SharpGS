@@ -1,4 +1,5 @@
-﻿using GettingStarted.Events;
+﻿using GettingStarted.AsyncAwait;
+using GettingStarted.Events;
 
 namespace GettingStarted
 {
@@ -7,7 +8,8 @@ namespace GettingStarted
         public static void Main()
         {
             Console.WriteLine("_____Getting Started with C#._____");
-            EventExample.RunEventExamples();
+            // EventExample.RunEventExamples();
+            TaskExample.StartExample();
         }
     }
 }
