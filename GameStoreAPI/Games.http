@@ -1,0 +1,46 @@
+﻿@BASE_URI = http://localhost:5068
+
+# @no-log
+# @name Home Route
+GET {{BASE_URI}}
+
+###
+# @no-log
+# @name Get Games
+GET {{BASE_URI}}/game
+
+###
+# @no-log
+# @name Get Game (By Id)
+GET {{BASE_URI}}/game/2
+
+###
+# @no-log
+# @name Add Game
+POST {{BASE_URI}}/game
+Content-Type: application/json
+
+{
+  "Name": "DuckSimu 2.0",
+  "Price": 120,
+  "Genre": "Simulation",
+  "ReleaseDate": "2031-02-11"
+}
+
+###
+# @no-log
+# @name Update Game
+PUT {{BASE_URI}}/game/2
+Content-Type: application/json
+
+{
+  "Name": "Tekken 11",
+  "Price": 1904.93,
+  "Genre": "Fighting",
+  "ReleaseDate": "2030-02-21"
+}
+
+###
+# @no-log
+# @name Delete Game
+DELETE {{BASE_URI}}/game/2
