@@ -31,7 +31,7 @@ public static class GamesEndpoints
             return game is null ? Results.NotFound("Game not found") : Results.Ok(game);
         }).WithName(CGetGameById);
 
-        group.MapPost("/", (CreateGameDto game, GameStoreContext dbContext) =>
+        group.MapPost("/", async (CreateGameDto game, GameStoreContext dbContext) =>
         {
             Game newGame = new()
             {
@@ -41,7 +41,7 @@ public static class GamesEndpoints
                 ReleaseDate = game.ReleaseDate
             };
             dbContext.Games.Add(newGame);
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
 
             GameDetailsDto gameDetailsDto = new( newGame.Id, newGame.Name, newGame.GenreId, newGame.Price, newGame.ReleaseDate );
             return Results.CreatedAtRoute(CGetGameById, new {id = gameDetailsDto.Id}, gameDetailsDto);
