@@ -23,7 +23,7 @@ Content-Type: application/json
 {
   "Name": "DuckSimu 2.0",
   "Price": 120,
-  "Genre": "Simulation",
+  "GenreId": 1,
   "ReleaseDate": "2031-02-11"
 }
 

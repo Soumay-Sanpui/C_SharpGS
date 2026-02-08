@@ -1,11 +1,13 @@
-﻿using GameStoreAPI.DTO;
+﻿using GameStoreAPI.Data;
+using GameStoreAPI.DTO;
+using GameStoreAPI.Models;
 
 namespace GameStoreAPI.Endpoints;
 
 public static class GamesEndpoints
 {
     
-    private const string CGetgamebyid = "GetGameById"; // can define a name for a particular endpoint to get it referenced by other endpoints.
+    private const string CGetGameById = "GetGameById"; // can define a name for a particular endpoint to get it referenced by other endpoints.
     // readonly only locks the reference not the data.
     private static readonly List<GameDto> Games =
     [
@@ -27,14 +29,22 @@ public static class GamesEndpoints
         {
             var game = Games.Find(game => game.Id.Equals(id));
             return game is null ? Results.NotFound("Game not found") : Results.Ok(game);
-        }).WithName(CGetgamebyid);
+        }).WithName(CGetGameById);
 
-        group.MapPost("/", (CreateGameDto game) =>
+        group.MapPost("/", (CreateGameDto game, GameStoreContext dbContext) =>
         {
-            var (name, genre, price, releaseDate) = game;
-            var newGame = new GameDto( Games.Count + 1, name, genre, price, releaseDate );
-            Games.Add(newGame);
-            return Results.CreatedAtRoute(CGetgamebyid, new {id = newGame.Id}, newGame);
+            Game newGame = new()
+            {
+                Name = game.Name,
+                GenreId = game.GenreId,
+                Price = game.Price,
+                ReleaseDate = game.ReleaseDate
+            };
+            dbContext.Games.Add(newGame);
+            dbContext.SaveChanges();
+
+            GameDetailsDto gameDetailsDto = new( newGame.Id, newGame.Name, newGame.GenreId, newGame.Price, newGame.ReleaseDate );
+            return Results.CreatedAtRoute(CGetGameById, new {id = gameDetailsDto.Id}, gameDetailsDto);
         });
 
         group.MapPut("/{id:int}", (int id, UpdateGameDto updatedGame) =>
