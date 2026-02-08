@@ -15,7 +15,8 @@ public static class DataExtensions
     public static void AddGameStoreDb(this WebApplicationBuilder builder)
     {
         // injecting context options for db. (DI)
-        const string connString = "Data Source=GameStore.db";
+        var connString = builder.Configuration.GetConnectionString("GameStoreDS");
+        // we can get the connection strings using the in-build configuration manager and storing the keys in appsettings.json.
         builder.Services.AddSqlite<GameStoreContext>(connString,
             optionsAction: options => options.UseSeeding((context, _) =>
             {
