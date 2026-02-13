@@ -9,6 +9,9 @@
 
     <ItemGroup>
       <Folder Include="Behavioural\StrategyPattern\" />
+      <Folder Include="Creational/" />
+      <Folder Include="Creational/FactoryPattern/" />
+      <Folder Include="Structural/DecoratorPattern/Condiment/" />
     </ItemGroup>
 
 </Project>
