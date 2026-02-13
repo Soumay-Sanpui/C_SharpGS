@@ -2,6 +2,9 @@ namespace DesignPatterns.Behavioural.ObserverPattern;
 
 class Pattern
 {
+    /// <summary>
+    /// Intent: Notify multiple objects automatically when one object changes.
+    /// </summary>
     public static void RunObservableExample()
     {
         var ws = new WeatherStation();

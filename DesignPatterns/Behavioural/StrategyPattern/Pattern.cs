@@ -4,7 +4,10 @@ namespace DesignPatterns.Behavioural.StrategyPattern;
 
 public class Pattern
 {
-    public static void RunExample()
+    /// <summary>
+    /// Intent: Define multiple algorithms and switch between them at runtime.
+    /// </summary>
+    public static void RunStrategyExample()
     {
         Console.WriteLine("-----Strategy Pattern-----");
         var order = new Order()
