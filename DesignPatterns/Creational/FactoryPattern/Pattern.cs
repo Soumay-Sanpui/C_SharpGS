@@ -7,5 +7,9 @@ namespace DesignPatterns.Creational.FactoryPattern;
 /// </summary>
 public class Pattern
 {
-
+    public static void RunFactoryPatternExample()
+    {
+        PizzaShop pizzaShop = new();
+        pizzaShop.OrderPizza("GrEeK");
+    }
 }

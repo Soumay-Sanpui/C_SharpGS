@@ -1,6 +1,7 @@
 ﻿// using DesignPatterns.Behavioural.StrategyPattern;
 // using DesignPatterns.Behavioural.ObserverPattern;
-using DesignPatterns.Structural.DecoratorPattern;
+// using DesignPatterns.Structural.DecoratorPattern;
+using DesignPatterns.Creational.FactoryPattern;
 
 namespace  DesignPatterns;
 public class Program
@@ -10,6 +11,7 @@ public class Program
         Console.WriteLine("Getting started with Design Pattern in C#.");
         // Pattern.RunStrategyExample();
         // Pattern.RunObservableExample();
-        Pattern.RunExample();
+        // Pattern.RunExample();
+        Pattern.RunFactoryPatternExample();
     }
 }
