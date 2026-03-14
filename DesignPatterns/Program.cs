@@ -1,7 +1,8 @@
 ﻿// using DesignPatterns.Behavioural.StrategyPattern;
 // using DesignPatterns.Behavioural.ObserverPattern;
 // using DesignPatterns.Structural.DecoratorPattern;
-using DesignPatterns.Creational.FactoryPattern;
+// using DesignPatterns.Creational.FactoryPattern;
+using DesignPatterns.Behavioural.CommandPattern;
 
 namespace  DesignPatterns;
 public class Program
@@ -12,6 +13,7 @@ public class Program
         // Pattern.RunStrategyExample();
         // Pattern.RunObservableExample();
         // Pattern.RunExample();
-        Pattern.RunFactoryPatternExample();
+        // Pattern.RunFactoryPatternExample();
+        Pattern.RunCommandExample();
     }
 }

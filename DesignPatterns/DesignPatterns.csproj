@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Behavioural/CommandPattern/" />
+    <Folder Include="Behavioural/CommandPattern/Receivers/" />
     <Folder Include="Behavioural\StrategyPattern\" />
     <Folder Include="Creational/" />
     <Folder Include="Creational/FactoryPattern/" />
