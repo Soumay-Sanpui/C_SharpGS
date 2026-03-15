@@ -2,17 +2,17 @@ using DesignPatterns.Behavioural.CommandPattern.Receivers;
 
 namespace DesignPatterns.Behavioural.CommandPattern;
 
-public class LightOnCommand(Light lht) : ICommand
+public class LightOffCommand(Light light): ICommand
 {
-    private readonly Light light = lht;
+    readonly Light lgt = light;
 
     public void Execute()
     {
-        light.On();
+        lgt.Off();
     }
 
     public void Undo()
     {
-        light.Off();
+        lgt.On();
     }
 }

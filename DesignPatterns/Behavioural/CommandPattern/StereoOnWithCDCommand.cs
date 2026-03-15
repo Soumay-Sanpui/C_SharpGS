@@ -2,17 +2,19 @@ using DesignPatterns.Behavioural.CommandPattern.Receivers;
 
 namespace DesignPatterns.Behavioural.CommandPattern;
 
-public class LightOnCommand(Light lht) : ICommand
+public class StereoOnWithCDCommand(Stereo st): ICommand
 {
-    private readonly Light light = lht;
+    readonly Stereo stereo = st;
 
     public void Execute()
     {
-        light.On();
+        stereo.On();
+        stereo.SetCD();
+        stereo.SetVolume(30);
     }
 
     public void Undo()
     {
-        light.Off();
+        stereo.Off();
     }
 }
