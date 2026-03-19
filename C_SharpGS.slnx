@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="DesignPatterns/DesignPatterns.csproj" />
+  <Project Path="DungeonRunner/DungeonRunner.csproj" />
   <Project Path="GameStoreAPI/GameStoreAPI.csproj" />
   <Project Path="GettingStarted/GettingStarted.csproj" />
 </Solution>
